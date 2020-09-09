@@ -1,62 +1,118 @@
 from docxtpl import DocxTemplate
 
 doc = DocxTemplate("заявлениеОБ.docx")
+    
+print("***")
+print("ПОЖАЛУЙСТА ВВОДИТЕ ДАННЫЕ ВНИМАТЕЛЬНО")
+print("***")
+print("")
 
 print("Фамилия:")
 surname = input()
 
 print("Имя:")
 name = input()
+if(name == '!'):
+    print("Фамилия:")
+    surname = input()
 
 print("Отчество:")
 otch = input()
+if(otch == '!'):
+    print("Имя:")
+    name = input()
 
 print("Дата рождения (ДД.ММ.ГГГГ):")
 date = input()
+if(date == '!'):
+    print("Отчество:")
+    otch = input()
 
 print("Место рождения:")
 birthPL = input()
+if(birthPL == '!'):
+    print("Дата рождения (ДД.ММ.ГГГГ):")
+    date = input()
 
 print("Телефон:")
 tel = input()
+if(tel == '!'):
+    print("Место рождения:")
+    birthPL = input()
 
 print("ИНН:")
 inn = input()
+if(inn == '!'):
+    print("Телефон:")
+    tel = input()
 
 print("СНИЛС:")
 snils = input()
+if(snils == '!'):
+    print("ИНН:")
+    inn = input()
 
 print("Серия паспорта:")
 seria = input()
-
+if(seria == '!'):
+    print("СНИЛС:")
+    snils = input()
+    
 print("Номер паспорта:")
 number = input()
+if(number == '!'):
+    print("Серия паспорта:")
+    seria = input()
 
-print("Кем выдан:")
+print("Кем и Когда выдан:")
 getPS = input()
+if(getPS == '!'):
+    print("Номер паспорта:")
+    number = input()
 
 print("")
 print("***Адрес проживания клиента***")
 print("Район:")
 rajon = input()
+if(rajon == '!'):
+    print("Кем выдан:")
+    getPS = input()
 
 print("Город:")
 city = input()
+if(city == '!'):
+    print("Район:")
+    rajon = input()
 
 print("Населённый пункт:")
 naspun = input()
+if(naspun == '!'):
+    print("Город:")
+    city = input()
 
 print("Улица:")
 street= input()
+if(street == '!'):
+    print("Населённый пункт:")
+    naspun = input()
 
 print("Дом:")
 dom = input()
+if(dom == '!'):
+    print("Улица:")
+    street= input()
 
 print("Корпус:")
 corp = input()
+if(corp == '!'):
+    print("Дом:")
+    dom = input()
 
 print("Квартира:")
 kvart = input()
+if(kvart == '!'):
+    print("Корпус:")
+    corp = input()
 
 
 
