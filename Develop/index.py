@@ -72,11 +72,17 @@ if(getPS == '!'):
 
 print("")
 print("***Адрес проживания клиента***")
+print("Область:")
+obl = input()
+if(obl == '!'):
+    print("Кем и Когда выдан:")
+    getPS = input()
+
 print("Район:")
 rajon = input()
 if(rajon == '!'):
-    print("Кем выдан:")
-    getPS = input()
+    print("Область:")
+    obl = input()
 
 print("Город:")
 city = input()
@@ -116,7 +122,7 @@ if(kvart == '!'):
 
 
 
-context = { 'name' : name, 'sur': surname, 'otch': otch, 'seria': seria, 'tel': tel, 'date': date, 'inn': inn, 'birthPL': birthPL, 'getPS': getPS, 'naspun': naspun, 'rajon': rajon, 'dom': dom, 'street': street, 'city': city, 'corp': corp, 'kvart': kvart, 'number': number, 'snils': snils}
+context = { 'name' : name, 'sur': surname, 'otch': otch, 'seria': seria, 'tel': tel, 'date': date, 'inn': inn, 'birthPL': birthPL, 'getPS': getPS, 'naspun': naspun, 'obl': obl,'rajon': rajon, 'dom': dom, 'street': street, 'city': city, 'corp': corp, 'kvart': kvart, 'number': number, 'snils': snils}
 
 doc.render(context)
 doc.save("заявление-" + surname + ".docx")
